@@ -49,11 +49,25 @@ public class MyArrayList<T> implements MyList{
 
     @Override
     public T remove(int index) {
-        return null;
+        if (size <= arr.length/2)
+            decreaseBuffer();
+        T res = arr[index];
+        for (int i = size - index + 1; i < size - 1; i++){
+            arr[size] = arr[size + 1];
+        }
+        return res;
     }
 
     public void increaseBuffer(){
         T[] newArr = (T[]) new Object[arr.length*2];
+        for(int i=0; i< arr.length; i++){
+            newArr[i]=arr[i];
+        }
+        arr = newArr;
+    }
+
+    public void decreaseBuffer(){
+        T[] newArr = (T[]) new Object[arr.length/2];
         for(int i=0; i< arr.length; i++){
             newArr[i]=arr[i];
         }
