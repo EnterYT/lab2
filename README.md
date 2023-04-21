@@ -1,8 +1,10 @@
 # MyArrayList
 ## Atributes:
->This class has 3 atributes:
->### T[] arr
+>This class has 2 atributes:
+>**T[] arr**
 >The array containing elements of different data types.
+>**int size**
+>The number of elements in ArrayList
 
 ## size()
 Description:
