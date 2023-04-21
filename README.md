@@ -1,9 +1,9 @@
 # MyArrayList
 ## Atributes:
 >This class has 2 atributes:
-># T[] arr
+>## T[] arr
 >The array containing elements of different data types.
-># int size
+>## int size
 >The number of elements in ArrayList
 
 ## size()
