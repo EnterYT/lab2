@@ -1,14 +1,14 @@
 # MyArrayList
 ## Atributes:
->This class has 2 atributes:
->## T[] arr
->The array containing elements of different data types.
->## int size
->The number of elements in ArrayList
+> This class has 2 atributes:
+>- ## T[] arr
+>> The array containing elements of different data types.
+>- ## int size
+>> The number of elements in ArrayList
 
 ## size()
 Description:
->Returns the number of elements in ArrayList
+> Returns the number of elements in ArrayList
 <em>Code:</em>
 "Java
 public int size() {
