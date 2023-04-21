@@ -9,7 +9,7 @@
 ## size()
 __Description:__
 > Returns the number of elements in ArrayList
-__Code:__
+_Code:_
 ```Java
 public int size() {
         return size;
@@ -19,7 +19,7 @@ public int size() {
 ## contains(Object o)
 __Description:__
 >Returns true if ArrayList contains the searched element
-__Code:__
+_Code:_
 ```Java
 public boolean contains(Object o) {
         boolean res = false;
@@ -36,7 +36,7 @@ public boolean contains(Object o) {
 ## add(Object o)
 __Description:__
 >Adds an element to the end of the ArrayList
-__Code:__
+_Code:_
 ```Java
 public void add(Object element){
         if(size == arr.length){
@@ -49,7 +49,7 @@ public void add(Object element){
 ## add(Object o, int index)
 __Description:__
 >Insert an element into the position of entered index
-__Code:__
+_Code:_
 ```Java
 public void add(Object item, int index) {
         if (size == arr.length){
@@ -65,7 +65,7 @@ public void add(Object item, int index) {
 ## increaseBuffer();
 __Description:__
 >Increases the capacity of the ArrayList when it is about to get full
-__Code:__
+_Code:_
 ```Java
 public void increaseBuffer(){
         T[] newArr = (T[]) new Object[arr.length*2];
@@ -78,7 +78,7 @@ public void increaseBuffer(){
 ## remove(int index)
 __Description:__
 >Retursn an element of index of the entered number then removes it 
-__Code:__
+_Code:_
 ```Java
     public T remove(int index) {
         if (size <= arr.length/2 && size > 9)
