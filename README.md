@@ -8,7 +8,7 @@
 
 ## size()
 __Description:__
-> Returns the number of elements in ArrayList
+> Returns the number of elements in ArrayList.
 _Code:_
 ```Java
 public int size() {
