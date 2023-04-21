@@ -51,7 +51,7 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public T remove(int index) {
-        if (size <= arr.length/2)
+        if (size <= arr.length/2 && size > 9)
             decreaseBuffer();
         T res = arr[index];
         for (int i = size - index + 1; i < size - 1; i++){
