@@ -7,20 +7,20 @@
 >> The number of elements in ArrayList
 
 ## size()
-Description:
+__Description:__
 > Returns the number of elements in ArrayList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public int size() {
         return size;
     }
-"
+```
 
 ## contains(Object o)
-Description:
+__Description:__
 >Returns true if ArrayList contains the searched element
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public boolean contains(Object o) {
         boolean res = false;
         for (int i = 0; i < size; i++){
@@ -31,26 +31,26 @@ public boolean contains(Object o) {
         }
         return res;
     }
-"
+```
 
 ## add(Object o)
-Description:
+__Description:__
 >Adds an element to the end of the ArrayList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public void add(Object element){
         if(size == arr.length){
             increaseBuffer();
         }
         arr[size++] = (T) element;
     }
-"
+```
 
 ## add(Object o, int index)
-Description:
+__Description:__
 >Insert an element into the position of entered index
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public void add(Object item, int index) {
         if (size == arr.length){
             increaseBuffer();
@@ -60,13 +60,13 @@ public void add(Object item, int index) {
         }
         arr[index] = (T) item;
     }
-"
+```
 
 ## increaseBuffer();
-Description:
+__Description:__
 >Increases the capacity of the ArrayList when it is about to get full
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public void increaseBuffer(){
         T[] newArr = (T[]) new Object[arr.length*2];
         for(int i=0; i< arr.length; i++){
@@ -74,12 +74,12 @@ public void increaseBuffer(){
         }
         arr = newArr;
     }
-"
+```
 ## remove(int index)
-Description:
+__Description:__
 >Retursn an element of index of the entered number then removes it 
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public T remove(int index) {
         if (size <= arr.length/2 && size > 9)
             decreaseBuffer();
@@ -91,24 +91,24 @@ Description:
         size--;
         return res;
     }
-"
+```
 ## checkIndex(int index)
-Description:
+__Description:__
 >Checks for validity of entered number
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public void checkIndex(int index){
         if(index < 0 || index>=size){
             throw new IndexOutOfBoundsException();
         }
     }
-"
+```
 
 ## decreaseBuffer()
-Description:
+__Description:__
 >Decreases the capacity of the ArrayList when it gets half empty
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public void decreaseBuffer(){
         T[] newArr = (T[]) new Object[arr.length/2];
         for(int i=0; i< arr.length; i++){
@@ -116,43 +116,43 @@ Description:
         }
         arr = newArr;
     }
-"
+```
 ## getElement(int index)
-Description:
+__Description:__
 >Returns the element of index of entered number
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public T getElement(int index) {
         checkIndex(index);
         return arr[index];
     }
-"
+```
 
 ## clear()
-Description:
+__Description:__
 >Clears all elements of the Arraylist
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public void clear(){
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
-"
+```
 ## get(int index)
-Description:
+__Description:__
 >Returns the element with index of entered number
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public Object get(int index) {
         return arr[index];
     }
-"
+```
 
 ## indexOf(Object o)
-Descriotion:
+__Descriotion:__
 >Returns the index of the first searched element, returns -1 if there is no such element in ArrayList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public int indexOf(Object o) {
         int id = -1;
         for (int i =0; i < size; i++) {
@@ -163,13 +163,13 @@ Descriotion:
         }
         return id;
     }
-"
+```
 
 ## lastIndexOf(Object o)
-Description:
+__Description:__
 >Returns the last index of searched element, returns -1 if there is no such element in ArrayList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public int lastIndexOf(Object o) {
         int id = -1;
         for (int i = size; i == 0; i--) {
@@ -180,33 +180,33 @@ Description:
         }
         return id;
     }
-"
+```
 
 # MyLinkedList
 ## Atribites
 >This class has 3 atributes:
->## T[] arr
->The array containing elements of different data types.
->## int size
->The number of elements in ArrayList
->## int next
->The address of the next element in LinkedList
+>- ## T[] arr
+>> The array containing elements of different data types.
+>- ## int size
+>> The number of elements in ArrayList
+>- ## int next
+>> The address of the next element in LinkedList
 
 ## size()
-Description:
+__Description:__
 >Returns the number of elements in LinkedList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public int size() {
         return size;
     }
-"
+```
 
 ## contains(Object o)
-Description:
+__Description:__
 >Returns true if ArrayList contains the searched element
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public boolean contains(Object o) {
         boolean res = false;
         for (int i = 0; i < size; i++){
@@ -217,26 +217,26 @@ public boolean contains(Object o) {
         }
         return res;
     }
-"
+```
 
 ## add(Object o)
-Description:
+__Description:__
 >Adds an element to the end of the LinkedList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public void add(Object element){
         if(size == arr.length){
             increaseBuffer();
         }
         arr[size++] = (T) element;
     }
-"
+```
 
 ## add(Object o, int index)
-Description:
+__Description:__
 >Insert an element into the position of entered index
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public void add(Object item, int index) {
         if (size == arr.length){
             increaseBuffer();
@@ -246,13 +246,13 @@ public void add(Object item, int index) {
         }
         arr[index] = (T) item;
     }
-"
+```
 
 ## increaseBuffer();
-Description:
+__Description:__
 >Increases the capacity of the ArrayList when it is about to get full
-<em>Code:</em>
-"Java
+__Code:__
+```Java
 public void increaseBuffer(){
         T[] newArr = (T[]) new Object[arr.length*2];
         for(int i=0; i< arr.length; i++){
@@ -260,12 +260,12 @@ public void increaseBuffer(){
         }
         arr = newArr;
     }
-"
+```
 ## remove(int index)
-Description:
+__Description:__
 >Retursn an element of index of the entered number then removes it 
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public T remove(int index) {
         if (size <= arr.length/2 && size > 9)
             decreaseBuffer();
@@ -277,24 +277,24 @@ Description:
         size--;
         return res;
     }
-"
+```
 ## checkIndex(int index)
-Description:
+__Description:__
 >Checks for validity of entered number
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public void checkIndex(int index){
         if(index < 0 || index>=size){
             throw new IndexOutOfBoundsException();
         }
     }
-"
+```
 
 ## decreaseBuffer()
-Description:
+__Description:__
 >Decreases the capacity of the ArrayList when it gets half empty
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public void decreaseBuffer(){
         T[] newArr = (T[]) new Object[arr.length/2];
         for(int i=0; i< arr.length; i++){
@@ -302,43 +302,43 @@ Description:
         }
         arr = newArr;
     }
-"
+```
 ## getElement(int index)
-Description:
+__Description:__
 >Returns the element of index of entered number
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public T getElement(int index) {
         checkIndex(index);
         return arr[index];
     }
-"
+```
 
 ## clear()
-Description:
+__Description:__
 >Clears all elements of the Linkedlist
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public void clear(){
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
-"
+```
 ## get(int index)
-Description:
+__Description:__
 >Returns the element with index of entered number
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public Object get(int index) {
         return arr[index];
     }
-"
+```
 
 ## indexOf(Object o)
-Descriotion:
+__Descriotion:__
 >Returns the index of the first searched element, returns -1 if there is no such element in LinkedList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public int indexOf(Object o) {
         int id = -1;
         for (int i =0; i < size; i++) {
@@ -349,13 +349,13 @@ Descriotion:
         }
         return id;
     }
-"
+```
 
 ## lastIndexOf(Object o)
-Description:
+__Description:__
 >Returns the last index of searched element, returns -1 if there is no such element in LinkedList
-<em>Code:</em>
-"Java
+__Code:__
+```Java
     public int lastIndexOf(Object o) {
         int id = -1;
         for (int i = size; i == 0; i--) {
@@ -366,4 +366,4 @@ Description:
         }
         return id;
     }
-"
+```
