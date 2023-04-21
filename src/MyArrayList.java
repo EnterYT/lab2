@@ -79,9 +79,6 @@ public class MyArrayList<T> implements MyList{
         return arr[index];
     }
 
-    public int getSize() {
-        return size;
-    }
     public void clear(){
         this.arr = (T[]) new Object[5];
         this.size = 0;
