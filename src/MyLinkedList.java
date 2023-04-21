@@ -54,9 +54,11 @@ public class MyLinkedList<T> implements MyList{
         if (size <= arr.length/2 && size > 9)
             decreaseBuffer();
         T res = arr[index];
-        for (int i = size - index + 1; i < size - 1; i++){
-            arr[size] = arr[size + 1];
+        checkIndex(index);
+        for (int i= index + 1; i<size; i++){
+            arr[i-1] = arr[i];
         }
+        size--;
         return res;
     }
 
@@ -120,13 +122,6 @@ public class MyLinkedList<T> implements MyList{
 
     }
 
-    public void delete(int index){
-        checkIndex(index);
-        for (int i= index + 1; i<size; i++){
-            arr[i-1] = arr[i];
-        }
-        size--;
-    }
     public void checkIndex(int index){
         if(index < 0 || index>=size){
             throw new IndexOutOfBoundsException();
